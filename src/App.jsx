@@ -1,13 +1,23 @@
 import "./App.css";
 import { TwFollowCard } from "./TwFollowCard";
 
-
 export function App() {
+  const format = (userName) => `@${userName}`;
+
   return (
     <section className="follow-card-section">
-        <TwFollowCard userName="sindresorhus" name="Sindre Sorhus" isFollowing="Follow"/>
-        <TwFollowCard userName="pheralb" name="Pablo Hernandez" isFollowing="Follow"/>
-        <TwFollowCard userName="joebiden" name="JOE 2020" isFollowing="Follow"/>
+      <TwFollowCard format={format} userName="sindresorhus" isFollowing>
+        Sindre Sorhus
+      </TwFollowCard>
+      <TwFollowCard format={format} userName="pheralb" isFollowing={false}>
+        Pablo Hernandez
+      </TwFollowCard>
+      <TwFollowCard format={format} userName="joebiden" isFollowing={false}>
+        JOE 2020
+      </TwFollowCard>
+      <TwFollowCard format={format} userName="peterp" isFollowing>
+        Peter Parker
+      </TwFollowCard>
     </section>
   );
 }

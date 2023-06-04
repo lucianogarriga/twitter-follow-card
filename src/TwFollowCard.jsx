@@ -1,6 +1,17 @@
  
-export const TwFollowCard = ({userName, name, isFollowing}) => { 
+export const TwFollowCard = ({children, format, userName, name, isFollowing}) => { 
   
+    console.log(isFollowing);
+
+    
+    // const isFollowing = () => {
+    //     if (isFollowing == true) {
+    //         return "Seguir"
+    //     } else {
+    //         return false
+    //     }
+    // }
+
     return (
     <article className="tw-followCard">
     <header className="tw-followCard-header">
@@ -10,8 +21,8 @@ export const TwFollowCard = ({userName, name, isFollowing}) => {
         alt="El avatar de Sindresorhus"
       />
       <div className="tw-followCard-info">
-        <strong>{name}</strong>
-        <span className="tw-followCard-userName">@{userName}</span>
+        <strong>{name} {children}</strong>
+        <span className="tw-followCard-userName">{format(userName)}</span>
       </div>
     </header>
 
