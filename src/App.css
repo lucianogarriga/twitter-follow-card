@@ -1,10 +1,28 @@
+.follow-card-section{
+    background: #16181c;
+} 
+
+.title-follow-txt{
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    padding: 12px 16px;
+    color: #e7e9ea;
+}
+
 .tw-followCard {
     display: flex;
-    align-items:center; 
+    align-items:center;  
     color:#fff;
-    font-size: 14px;
+    font-size: 15px;
     justify-content: space-between;
+    padding: 12px 16px;
 } 
+.tw-followCard:hover{
+    background: #1b1b1b; 
+    transition: .15s ease;
+    cursor: pointer;
+}
 
 .tw-followCard-header{
     display: flex;
@@ -12,9 +30,15 @@
     gap: 4px;
 }
 
-.tw-followCard-info{
+.tw-followCard-name{
     display: flex;
     flex-direction: column;
+    color: #e7e9ea;
+    line-height: 20px;
+}
+
+.tw-followCard-name strong:hover{
+    text-decoration: underline;
 }
 
 .tw-followCard-userName{
@@ -33,4 +57,31 @@
     border-radius: 999px;
     padding: 6px 16px;
     font-weight: bold;
+    background: #eff3f4;
 }
+
+.tw-followCard-button:hover{
+    background: rgb(167, 167, 167); 
+    transition: .4s ease background;
+    cursor: pointer;
+}
+
+.tw-more-links-section{ 
+    font-family: 'Times New Roman', Times, serif;
+    padding: 16px;
+    font-size: 15px; 
+    border-radius: 0px 0px 16px 16px;
+}
+
+.tw-more-links-section:hover{
+    background: #1b1b1b; 
+    transition: .15s ease; 
+}
+
+.title-follow-more{  
+    font-size: 15px; 
+    line-height: 20px; 
+    color: #1d9bf0; 
+}
+ 
+ 
