@@ -1,6 +1,11 @@
 .follow-card-section{
     background: #16181c;
+    border-radius: 16px;
 } 
+
+.title-follow-box{  
+    padding: 16px; 
+}
 
 .title-follow-txt{
     font-size: 20px;
@@ -66,11 +71,8 @@
     cursor: pointer;
 }
 
-.tw-more-links-section{ 
-    font-family: 'Times New Roman', Times, serif;
-    padding: 16px;
-    font-size: 15px; 
-    border-radius: 0px 0px 16px 16px;
+.tw-more-links-section{  
+    padding: 16px; 
 }
 
 .tw-more-links-section:hover{

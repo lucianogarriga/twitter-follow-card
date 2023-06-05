@@ -25,7 +25,7 @@ export function App() {
     </div> 
     <a href="https://twitter.com/home" className="tw-more-links-section">
       <div className="title-follow-more">
-        <span className="tw-more-links-span">Mostrar mas</span>
+        <span className="tw-more-links-span">Mostrar más</span>
       </div>
     </a> 
     </section>
