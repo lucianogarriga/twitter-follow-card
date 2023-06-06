@@ -1,29 +1,29 @@
+ 
 import "./App.css";
 import { TwFollowCard } from "./TwFollowCard";
 
-export function App() {
-  const format = (userName) => `@${userName}`;
-
+export function App() {  
+ 
   return (
     <section className="follow-card-section"> 
     <div className="title-follow-box">
         <span className="title-follow-txt">A quién seguir</span>
     </div>
     <div>
-        <TwFollowCard format={format} userName="sindresorhus" isFollowing>
+        <TwFollowCard userName="sindresorhus" initialIsFollowing={false}>
           Sindre Sorhus
         </TwFollowCard>
-        <TwFollowCard format={format} userName="pheralb" isFollowing={false}>
+        <TwFollowCard userName="pheralb" initialIsFollowing={false}>
           Pablo Hernandez
         </TwFollowCard>
-        <TwFollowCard format={format} userName="joebiden" isFollowing={false}>
+        <TwFollowCard userName="joebiden" initialIsFollowing={true}>
           JOE 2020
         </TwFollowCard>
-        <TwFollowCard format={format} userName="peterp" isFollowing>
+        <TwFollowCard userName="peterp" initialIsFollowing={false}>
           Peter Parker
         </TwFollowCard> 
-    </div> 
-    <a href="https://twitter.com/home" className="tw-more-links-section">
+    </div>  
+    <a href="https://twitter.com/luchogarriga" className="tw-more-links-section">
       <div className="title-follow-more">
         <span className="tw-more-links-span">Mostrar más</span>
       </div>

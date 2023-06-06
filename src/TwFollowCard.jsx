@@ -1,5 +1,17 @@
-export const TwFollowCard = ({ children, format, userName = 'unknown', isFollowing }) => {
- const text = isFollowing ? 'Siguiendo' : 'Seguir'
+import { useState } from "react";
+
+export const TwFollowCard = ({ children, userName, initialIsFollowing }) => {
+  const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
+
+  const handleClick = () => {
+    setIsFollowing(!isFollowing);
+  };
+
+  const text =  isFollowing ? "Siguiendo" : "Seguir";
+
+  const buttonClassName = isFollowing
+    ? "tw-followCard-button is-following"
+    : "tw-followCard-button";
 
   return (
     <article className="tw-followCard">
@@ -11,13 +23,14 @@ export const TwFollowCard = ({ children, format, userName = 'unknown', isFollowi
         />
         <div className="tw-followCard-name">
           <strong>{children}</strong>
-          <span className="tw-followCard-userName">{format(userName)}</span>
+          <span className="tw-followCard-userName">@{userName}</span>
         </div>
       </header>
 
       <aside>
-        <button className="tw-followCard-button">
-          {text}
+        <button className={buttonClassName} onClick={handleClick}>
+          <span className="tw-followCard-text">{text}</span>
+          <span className="tw-followCard-stopFollow">Dejar de seguir</span>
         </button>
       </aside>
     </article>
